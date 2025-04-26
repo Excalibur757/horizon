@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+
+@theme {
+    --color-card1: #6A0DAD;
+    --color-card2: #FF007F;
+    --color-header: #6A0DAD;
+    --color-fundo: #1A1A2E;     
+}
+
+.bg-custom-gradient {
+    --color-start: #6A0DAD;
+    --color-end: #FF007F;
+    background-image: linear-gradient(to right, var(--color-start) 45%, var(--color-end) 80%);
+  }
