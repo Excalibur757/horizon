@@ -1,4 +1,4 @@
-import './styles/globals.css'; // Importando o globals.css certinho!
+import './styles/globals.css';
 
 export const metadata = {
   title: 'Horizon Vtubers',
