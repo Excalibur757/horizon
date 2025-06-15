@@ -121,7 +121,7 @@ export default function Home() {
                   Procurar Vtubers
                 </a>
                 <a
-                  href=""
+                  href="/cadastro"
                   className="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-6 rounded-full"
                 >
                   QUERO ESTAR AQUI!!!

@@ -7,10 +7,8 @@ export default function Criadores() {
         <div className="min-h-screen bg-fundo text-white flex flex-col">
             <Header />
             <main className="flex flex-col items-center justify-center py-20 px-4 flex-grow">
-                {/* Título centralizado */}
                 <h2 className="text-5xl font-bold text-center mb-16">Founder &<br />Project Lead</h2>
 
-                {/* Card de apresentação */}
                 <section className="bg-azul rounded-3xl p-8 w-full max-w-4xl flex flex-col md:flex-row items-center gap-8">
                     <img
                         src="/yutsu.png"
