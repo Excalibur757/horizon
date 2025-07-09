@@ -7,10 +7,14 @@ import { useState } from "react";
 export default function Perfil() {
   const [email, setEmail] = useState("vtuber@exemplo.com");
   const [username, setUsername] = useState("vtuber_exemplo");
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [socials, setSocials] = useState([
     { name: "Twitch", link: "twitch.tv/vtuber" },
     { name: "YouTube", link: "youtube.com/@vtuberBR" },
   ]);
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [statusTela, setStatusTela] = useState("Pronta para edição");
 
   const salvarPerfil = async () => {
