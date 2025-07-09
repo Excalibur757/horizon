@@ -21,3 +21,9 @@
   --color-end: #FF007F;
   background-image: linear-gradient(to bottom, var(--color-end) 45%, var(--color-start) 80%);
 }
+
+.bg-custom-gradient-vertical-reverse {
+  --color-start: #FF007F;
+  --color-end: #6A0DAD;
+  background-image: linear-gradient(to bottom, var(--color-end) 45%, var(--color-start) 80%);
+}

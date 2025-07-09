@@ -34,20 +34,23 @@ export default function Login() {
                                 required
                             />
                         </label>
-
-                        <button
-                            type="submit"
-                            className="mt-4 bg-purple-600 hover:bg-card2 text-white font-semibold py-2 px-4 rounded-xl transition-all"
-                        >
-                            Entrar
-                        </button>
+                        <label className="flex items-center text-white">
+                            <input
+                                type="checkbox"
+                                name="lembrar"
+                                className="mr-2 rounded focus:ring-purple-500"
+                            />
+                            Manter Login</label>
+                        <p className="mt-4 self-center bg-purple-600 hover:bg-card2 text-white font-semibold py-2 px-30 rounded-xl transition-all">
+                            <a href="/perfil">Entrar</a>
+                        </p>
                     </form>
                         <div className="col-span-2 flex flex-col items-center mt-2"> {/* Takes full width */}
                             <p className="text-white text-sm">
                                 Não tem login? <a href="/cadastro" className="text-card2 hover:underline">Cadastre-se!</a>
                             </p>
                             <p className="text-white text-sm m-4">
-                                <a href="/login" className="text-card2 hover:underline">Esqueci minha senha</a>
+                                <a href="/esqueci_senha" className="text-card2 hover:underline">Esqueci minha senha</a>
                             </p>
                         </div>
                 </section>

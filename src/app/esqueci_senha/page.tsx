@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useRouter } from "next/navigation";
 
-export default function Confirmar() {
+export default function Esqueci_senha() {
     const router = useRouter();
 
     const handleSubmit = (event: { preventDefault: () => void; }) => {
@@ -18,7 +18,7 @@ export default function Confirmar() {
             <img src={"/lulu.png"} alt="Lulu" className="h-auto w-auto" />
             <main className="flex flex-col items-center justify-center py-20 px-4 flex-grow">
                 <h2 className="text-5xl font-bold text-center mb-16">
-                    Và para sua caixa de entrada (ou spam) para confirmar seu código
+                    Abra seu email para pegar seu código
                 </h2>
 
                 <section className="bg-custom-gradient-vertical rounded-4xl p-6 shadow-lg flex flex-col items-center gap-6 w-full max-w-md">
@@ -33,12 +33,32 @@ export default function Confirmar() {
                                 required
                             />
                         </label>
+                        <label className="flex flex-col text-white items-center-safe">
+                            Digite a nova senha
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Digite seu email"
+                                className="mt-2 p-2 rounded bg-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                required
+                            />
+                        </label>
+                        <label className="flex flex-col text-white items-center-safe">
+                            Confirme a nova senha
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Digite seu email"
+                                className="mt-2 p-2 rounded bg-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                required
+                            />
+                        </label>
                         <button
                             type="submit"
                             className="mt-4 bg-purple-600 hover:bg-card2 text-white font-semibold py-2 px-4 rounded-xl transition-all"
                             onClick={handleSubmit}
                         >
-                            Validar
+                            Confirmar
                         </button>
                     </form>
                         <div className="col-span-2 flex flex-col items-center mt-2"> {/* Takes full width */}

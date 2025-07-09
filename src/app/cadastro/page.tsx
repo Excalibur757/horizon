@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useRouter } from 'next/navigation'; 
 
-export default function Login() {
+export default function Cadastro() {
     const router = useRouter();
 
     const handleSubmit = (event: { preventDefault: () => void; }) => {
@@ -18,7 +18,7 @@ export default function Login() {
             <img src={"/lulu.png"} alt="Lulu" className="h-auto w-auto" />
             <main className="flex flex-col items-center justify-center py-20 px-4 flex-grow">
                 <h2 className="text-5xl font-bold text-center mb-16">
-                    Vtuber! Quer particpar do projeto? Cadastre-se!
+                    Quer particpar do projeto? Cadastre-se!
                 </h2>
 
                 <section className="bg-custom-gradient-vertical rounded-4xl p-6 shadow-lg flex flex-col items-center gap-6 w-full max-w-md">
@@ -84,10 +84,13 @@ export default function Login() {
                             />
                         </label>
                         <div className="col-span-2 flex flex-col items-center mt-2"> 
+                            <p className="text-white text-sm text-center mt-2">
+                            Ao se cadastrar, você concorda com nossos <a href="/termos" className="text-card2 hover:underline">Termos de Uso</a> e <a href="/privacidade" className="text-card2 hover:underline">Política de Privacidade</a>.</p>
+
                             <div className="flex items-center gap-2 mb-2">
                                 <input type="checkbox" id="terms" name="terms" className="form-checkbox h-4 w-4 text-purple-600 rounded" />
                                 <label htmlFor="terms" className="text-white text-sm">
-                                    Li e aceito os <a href="#" className="text-card2 hover:underline">termos de uso</a>
+                                    Concordo com os <a href="#" className="text-card2 hover:underline">termos de uso</a>
                                 </label>
                             </div>
                             <p className="text-white text-sm">
