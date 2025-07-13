@@ -7,7 +7,7 @@ import { useState } from "react";
 export default function Perfil() {
   const [email, setEmail] = useState("vtuber@exemplo.com");
   const [username, setUsername] = useState("vtuber_exemplo");
-  const [social, setSocial] = useState("@vtuber_exemplo");
+  const [social, setSocial] = useState("@vtuber_ex");
 
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -66,7 +66,7 @@ export default function Perfil() {
               <input
                 type="text"
                 value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                onChange={(e) => setSocial(e.target.value)}
                 className="bg-transparent border-b border-white outline-none"
               />
             </div>
