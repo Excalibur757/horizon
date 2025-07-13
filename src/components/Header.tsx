@@ -11,7 +11,7 @@ export default function Header() {
         </Link>
 
         <nav className="flex gap-5 text-white font-medium">
-          <Link href="/">Encontre Seu Vtuber</Link>
+          <Link href="/pesquisar">Encontre Seu Vtuber</Link>
           <Link href="/criador">Criadores</Link>
           <Link href="/login">Login/User</Link>
         </nav>

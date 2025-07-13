@@ -26,8 +26,8 @@ export default function Esqueci_senha() {
                         <label className="flex flex-col text-white items-center-safe">
                             Digite o código enviado no email
                             <input
-                                type="email"
-                                name="email"
+                                type="code"
+                                name="code"
                                 placeholder="Digite seu email"
                                 className="mt-2 p-2 rounded bg-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500"
                                 required
@@ -36,8 +36,8 @@ export default function Esqueci_senha() {
                         <label className="flex flex-col text-white items-center-safe">
                             Digite a nova senha
                             <input
-                                type="email"
-                                name="email"
+                                type="newpassword"
+                                name="newpassword"
                                 placeholder="Digite seu email"
                                 className="mt-2 p-2 rounded bg-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500"
                                 required
@@ -46,8 +46,8 @@ export default function Esqueci_senha() {
                         <label className="flex flex-col text-white items-center-safe">
                             Confirme a nova senha
                             <input
-                                type="email"
-                                name="email"
+                                type="confirmPassword"
+                                name="confirmPassword"
                                 placeholder="Digite seu email"
                                 className="mt-2 p-2 rounded bg-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500"
                                 required
@@ -63,7 +63,7 @@ export default function Esqueci_senha() {
                     </form>
                         <div className="col-span-2 flex flex-col items-center mt-2"> {/* Takes full width */}
                             <p className="text-white text-sm">
-                                Não recebeu o código? <a href="/cadastro" className="text-card2 hover:underline">Tente Novamente</a>
+                                Não recebeu o código? <a href="/esqueci_senha" className="text-card2 hover:underline">Tente Novamente</a>
                             </p>
                         </div>
                 </section>

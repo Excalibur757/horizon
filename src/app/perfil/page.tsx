@@ -7,12 +7,8 @@ import { useState } from "react";
 export default function Perfil() {
   const [email, setEmail] = useState("vtuber@exemplo.com");
   const [username, setUsername] = useState("vtuber_exemplo");
+  const [social, setSocial] = useState("@vtuber_exemplo");
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [socials, setSocials] = useState([
-    { name: "Twitch", link: "twitch.tv/vtuber" },
-    { name: "YouTube", link: "youtube.com/@vtuberBR" },
-  ]);
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [statusTela, setStatusTela] = useState("Pronta para edição");
@@ -21,8 +17,8 @@ export default function Perfil() {
     const dados = {
       email,
       username,
-      socials,
       statusTela,
+      social
     };
 
     console.log("📦 Enviar para backend:", dados);
@@ -32,7 +28,7 @@ export default function Perfil() {
     <div className="min-h-screen bg-fundo text-white flex flex-col">
       <Header />
       <main className="flex flex-col items-center justify-center py-20 px-4 flex-grow">
-        <h2 className="text-5xl font-bold text-center mb-16">Olá, User</h2>
+        <h2 className="text-5xl font-bold text-center mb-16">Olá, user!</h2>
 
         <div className="flex flex-col md:flex-row gap-50">
           <section className="bg-custom-gradient-vertical rounded-[2rem] p-6 shadow-lg w-full max-w-md flex flex-col gap-4">
@@ -65,21 +61,14 @@ export default function Perfil() {
               />
             </div>
 
-            <div className="mt-4">
-              <p className="font-semibold mb-2">🌐 Redes Sociais:</p>
-              <ul className="text-sm space-y-1">
-                {socials.map((s, i) => (
-                  <li key={i}>
-                    [{s.name}] {s.link}{" "}
-                    <span className="text-cyan-200 cursor-pointer hover:underline">
-                      [editar]
-                    </span>
-                  </li>
-                ))}
-                <li className="text-cyan-300 mt-2 cursor-pointer hover:underline">
-                  [+] Adicionar nova rede social
-                </li>
-              </ul>
+            <div className="flex items-center gap-2">
+              <span>🌐</span>
+              <input
+                type="text"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                className="bg-transparent border-b border-white outline-none"
+              />
             </div>
 
             <div className="flex justify-between mt-6">

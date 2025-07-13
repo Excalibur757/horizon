@@ -63,7 +63,7 @@ export default function Home() {
                 Sunset Waves é um grupo de artistas e desenvolvedores comprometidos em entregar a melhor experiência e qualidade.
                 Eles foram responsáveis pelo frontend do site, deem uma olhada!
               </p>
-              <a href="#" className="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-6 rounded-full">
+              <a href="https://x.com/sunsetwaves_" className="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-6 rounded-full">
                 Conheça Sunset Waves
               </a>
             </div>
@@ -75,7 +75,7 @@ export default function Home() {
                 Ele foi o responsável pelo backend do site, otimizando o sistema para torná-lo mais funcional e eficiente.
                 Além disso, ele está desenvolvendo um site voltado para os fãs de GTA RP, se quer participar, acesse já!
               </p>
-              <a href="#" className="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-6 rounded-full">
+              <a href="https://x.com/kodayoz_" className="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-6 rounded-full">
                 Conheça Koda
               </a>
             </div>

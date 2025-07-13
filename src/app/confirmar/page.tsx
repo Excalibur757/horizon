@@ -18,17 +18,17 @@ export default function Confirmar() {
             <img src={"/lulu.png"} alt="Lulu" className="h-auto w-auto" />
             <main className="flex flex-col items-center justify-center py-20 px-4 flex-grow">
                 <h2 className="text-5xl font-bold text-center mb-16">
-                    Và para sua caixa de entrada (ou spam) para confirmar seu código
+                    Và para sua caixa de entrada (ou spam) para confirmação
                 </h2>
 
                 <section className="bg-custom-gradient-vertical rounded-4xl p-6 shadow-lg flex flex-col items-center gap-6 w-full max-w-md">
                     <form className="w-full flex flex-col gap-4">
-                        <label className="flex flex-col text-white items-center-safe">
+                        <label className="flex flex-col text-black items-center-safe">
                             Digite o código enviado no email
                             <input
-                                type="email"
-                                name="email"
-                                placeholder="Digite seu email"
+                                type="text"
+                                name="code"
+                                placeholder="Digite o código"
                                 className="mt-2 p-2 rounded bg-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500"
                                 required
                             />
@@ -41,7 +41,7 @@ export default function Confirmar() {
                             Validar
                         </button>
                     </form>
-                        <div className="col-span-2 flex flex-col items-center mt-2"> {/* Takes full width */}
+                        <div className="col-span-2 flex flex-col items-center mt-2"> 
                             <p className="text-white text-sm">
                                 Não recebeu o código? <a href="/cadastro" className="text-card2 hover:underline">Tente Novamente</a>
                             </p>
