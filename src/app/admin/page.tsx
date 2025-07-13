@@ -4,7 +4,17 @@ import Footer from "@/components/Footer";
 import { useState } from 'react';
 import VtuberCard from '@/components/VtuberCard';
 
-const mockVtubers = [
+type StatusFiltro = 'todos' | 'pendente' | 'aprovada' | 'reprovada';
+
+interface Vtuber {
+  id: number;
+  nome: string;
+  avatarUrl: string;
+  status: Exclude<StatusFiltro, 'todos'>;
+  dataEnvio: string;
+}
+
+const mockVtubers: Vtuber[] = [
   {
     id: 1,
     nome: 'Vtuber X',
@@ -31,7 +41,7 @@ const mockVtubers = [
 export default function Admin() {
   const [reprovarId, setReprovarId] = useState<number | null>(null);
   const [justificativa, setJustificativa] = useState('');
-  const [filtro, setFiltro] = useState<'todos' | 'pendente' | 'aprovada' | 'reprovada'>('todos');
+  const [filtro, setFiltro] = useState<StatusFiltro>('todos');
   const [busca, setBusca] = useState('');
 
   const vtubersFiltradas = mockVtubers.filter((vtuber) => {
@@ -45,15 +55,15 @@ export default function Admin() {
       <Header />
       <div className="absolute top-20 right-6 z-50">
         <button
-            onClick={() => {
+          onClick={() => {
             localStorage.removeItem('userToken');
             window.location.href = '/login';
-            }}
-            className="bg-pink-500 hover:bg-pink-400 text-white px-4 py-2 rounded-full text-sm font-semibold transition"
+          }}
+          className="bg-pink-500 hover:bg-pink-400 text-white px-4 py-2 rounded-full text-sm font-semibold transition"
         >
-            Sair
+          Sair
         </button>
-        </div>
+      </div>
       <div className="bg-[#0D0D1A] min-h-screen text-white flex">
         <div className="flex flex-col w-full px-10 py-8 gap-10">
           <h1 className="text-5xl font-light text-center">Olá,<br /><span className="font-semibold">Yutsu!</span></h1>
@@ -68,10 +78,10 @@ export default function Admin() {
             />
 
             <div className="flex gap-2 flex-wrap justify-center sm:justify-end">
-              {['todos', 'pendente', 'aprovada', 'reprovada'].map((status) => (
+              {(['todos', 'pendente', 'aprovada', 'reprovada'] as StatusFiltro[]).map((status) => (
                 <button
                   key={status}
-                  onClick={() => setFiltro(status as any)}
+                  onClick={() => setFiltro(status)}
                   className={`px-3 py-1 rounded-full text-sm ${
                     filtro === status ? 'bg-pink-500' : 'bg-[#3a3a5a]'
                   } capitalize`}
@@ -81,6 +91,7 @@ export default function Admin() {
               ))}
             </div>
           </div>
+
           <div className="flex flex-wrap gap-8 justify-start">
             {vtubersFiltradas.length > 0 ? (
               vtubersFiltradas.map((vtuber) => (
@@ -88,7 +99,7 @@ export default function Admin() {
                   key={vtuber.id}
                   nome={vtuber.nome}
                   avatarUrl={vtuber.avatarUrl}
-                  status={vtuber.status as any}
+                  status={vtuber.status}
                   dataEnvio={vtuber.dataEnvio}
                   onVerTela={() => alert(`Ver tela de ${vtuber.nome}`)}
                   onAprovar={vtuber.status === 'pendente' ? () => alert(`Aprovado ${vtuber.nome}`) : undefined}
