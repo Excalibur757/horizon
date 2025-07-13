@@ -4,13 +4,14 @@ import Footer from "@/components/Footer";
 import { useState } from 'react';
 import VtuberCard from '@/components/VtuberCard';
 
-type StatusFiltro = 'todos' | 'pendente' | 'aprovada' | 'reprovada';
+type Status = 'pendente' | 'aprovada' | 'reprovada';
+type StatusFiltro = Status | 'todos';
 
 interface Vtuber {
   id: number;
   nome: string;
   avatarUrl: string;
-  status: Exclude<StatusFiltro, 'todos'>;
+  status: Status;
   dataEnvio: string;
 }
 
@@ -53,6 +54,7 @@ export default function Admin() {
   return (
     <>
       <Header />
+
       <div className="absolute top-20 right-6 z-50">
         <button
           onClick={() => {
@@ -64,9 +66,12 @@ export default function Admin() {
           Sair
         </button>
       </div>
+
       <div className="bg-[#0D0D1A] min-h-screen text-white flex">
         <div className="flex flex-col w-full px-10 py-8 gap-10">
-          <h1 className="text-5xl font-light text-center">Olá,<br /><span className="font-semibold">Yutsu!</span></h1>
+          <h1 className="text-5xl font-light text-center">
+            Olá,<br /><span className="font-semibold">Yutsu!</span>
+          </h1>
 
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <input
@@ -142,6 +147,7 @@ export default function Admin() {
           </div>
         )}
       </div>
+
       <Footer />
     </>
   );
